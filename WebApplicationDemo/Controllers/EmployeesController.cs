@@ -22,12 +22,30 @@ namespace WebApplicationDemo.Controllers
         {
             return _employeeService.Create(employee);
         }
+       [HttpGet("{id}")]
+        public Task<Employee> GetById(int id)
+        {
+        return _employeeService.GetById(id);
+
+        }
         [HttpGet]
         public List<Employee> GetAll()
         {
             return _employeeService.GetAll();
         }
+        [HttpPut("{id}")]
+        public bool UpdateEmployee(int id, Employee employee)
+        {
+            return _employeeService.UpdateEmployee(id, employee);   
+        }
+
+        [HttpDelete("{id}")]
+        public Task<Employee> DeleteEmployee(int id)
+        {
+            return _employeeService.DeleteEmployee(id);
+        }
+
     }
 
-    
+
 }

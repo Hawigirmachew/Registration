@@ -9,7 +9,7 @@ namespace Entity
     public class Department
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public virtual ICollection<Employee> Employee { get; set; }
+        public string? name { get; set; }
+        public virtual ICollection<Employee>? Employee { get; set; }
     }
 }

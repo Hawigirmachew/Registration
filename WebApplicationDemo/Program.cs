@@ -16,6 +16,7 @@ builder.Services.AddDbContext<EmpoyeeDbContext>(options =>
 // AddScopped accept 2 parameters which are generic
 builder.Services.AddScoped(typeof(DbContext), typeof(EmpoyeeDbContext));
 builder.Services.AddScoped(typeof(IEmployees), typeof(EmployeeRepository));
+builder.Services.AddScoped(typeof(IDepartements), typeof(DepartmentRepository));
 
 builder.Services.AddControllers();
 
